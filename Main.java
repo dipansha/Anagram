@@ -13,6 +13,13 @@ class Anagram
 	{
 		line=temp;
 		words=line.split(" ");
+		
+		for(int i=0;i<words.length;i++)
+		{
+			char[] ar = words[i].toCharArray();
+			Arrays.sort(ar);
+			words[i] = String.valueOf(ar);
+		}
 		Arrays.sort(words);
 	}
 	boolean compare(String[] temp)
